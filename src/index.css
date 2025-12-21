@@ -1,68 +1,145 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+/* AUTH CONTAINER */
+.auth-container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: #f5f7fb;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* AUTH CARD */
+.auth-card {
+  width: 380px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
 }
 
-button {
+/* Judul & deskripsi center */
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.auth-card p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* FORM (CENTER ISI FORM) */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* KUNCI CENTER */
+}
+
+/* Input & Button center + lebar sama */
+.auth-card input,
+.auth-card button {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Input */
+.auth-card input {
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+}
+
+/* Button */
+.auth-card button {
+  margin-top: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  opacity: 0.9;
+}
+
+/* AUTH LINKS (REGISTER / FORGOT) */
+.auth-links.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 6px;
+}
+
+.auth-links.center a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.auth-links.center a:hover {
+  text-decoration: underline;
+}
+
+/* ERROR MESSAGE */
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* NAVBAR (3 KOLOM) */
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+
+/* kiri */
+.nav-left {
+  justify-self: start;
+}
+
+/* tengah */
+.nav-center {
+  justify-self: center;
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.nav-center a:hover {
+  text-decoration: underline;
+}
+
+/* kanan */
+.nav-right {
+  justify-self: end;
+}
+
+/* Logout button */
+.logout-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
 }
