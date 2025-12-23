@@ -33,6 +33,7 @@ export default function Login() {
         </form>
 
         <div className="auth-links center">
+          <Link to="/forgot-password">Lupa Password</Link>
           <Link to="/register">Belum punya akun? Daftar</Link>
         </div>
       </div>
